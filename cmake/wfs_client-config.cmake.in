@@ -1,0 +1,13 @@
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+find_dependency(fmt CONFIG)
+find_dependency(Thrift CONFIG)
+
+include("${CMAKE_CURRENT_LIST_DIR}/wfs_client-targets.cmake")
+
+# Provide library components
+set_and_check(WFS_CLIENT_INCLUDE_DIR "@PACKAGE_CMAKE_INSTALL_INCLUDEDIR@")
+set_and_check(WFS_CLIENT_LIB_DIR "@PACKAGE_CMAKE_INSTALL_LIBDIR@")
+
+check_required_components(wfs_client) 

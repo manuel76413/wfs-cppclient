@@ -1,0 +1,7 @@
+; WFS Client Library Export Symbol Definition File
+LIBRARY wfs_client
+EXPORTS
+    ; Factory function - Interface function that must be exported
+    CreateWfsClient
+    
+    ; Do not export any other symbols - especially avoid exporting symbols from fmt and thrift 
